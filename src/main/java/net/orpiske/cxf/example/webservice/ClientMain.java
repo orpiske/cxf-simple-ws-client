@@ -40,9 +40,9 @@ public class ClientMain {
 		/*
 		 * Sets the WSDL URL location
 		 */
-		//factory.setWsdlURL("classpath:/wsdl/timeservice/TimeService.wsdl");
-		//factory.setServiceName(new QName("http://www.orpiske.net/examples/cxf/webservice",
-		//		"TimeService"));
+		factory.setWsdlURL("classpath:/wsdl/timeservice/TimeService.wsdl");
+		factory.setServiceName(new QName("http://www.orpiske.net/examples/cxf/webservice",
+				"TimeService"));
 		
 		/*
 		 * Call the service and handle the response
