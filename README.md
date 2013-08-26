@@ -12,6 +12,8 @@ To compile the client code, using Apache Maven:
 mvn -P Delivery clean package
 ```
 
+Note: you will need to have installed the CXF WS Types before doing so.
+
 To install, just unpack it to your preferred location. To run, go to its directory and run:
 
 ```
@@ -22,4 +24,5 @@ References
 ----
 
 * [Main Site](http://orpiske.net/)
-
+* [Apache Maven](http://maven.apache.org/)
+* [Apache CXF](http://cxf.apache.org/)
