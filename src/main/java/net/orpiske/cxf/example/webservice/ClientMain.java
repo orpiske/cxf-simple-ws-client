@@ -12,10 +12,7 @@ import net.orpiske.examples.cxf.webservice.TimeService;
 
 
 public class ClientMain {
-	private static String ip = "localhost";
-	private static String port = "80";
-
-	public static void callService() {
+	public static void callService(final String address) {
 		JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
 
 		/*
@@ -33,7 +30,7 @@ public class ClientMain {
 		 * Target URL
 		 */
 
-		factory.setAddress("http://" + ip + ":" + port + "/TimeService");
+		factory.setAddress(address);
 
 		TimeService port = (TimeService) factory.create();
 
@@ -64,16 +61,14 @@ public class ClientMain {
 	 */
 	public static void main(String[] args) {
 		if (args.length == 1) {
-			ip = args[0];
+			callService(args[0]);
+			
 		}
 		else {
-			if (args.length >= 2) {
-				ip = args[0];
-				port = args[1];
-			}
+			callService("http://localhost:80/TimeService");
 		}
 
-		callService();
+		
 	}
 
 }

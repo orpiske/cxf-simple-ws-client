@@ -20,6 +20,14 @@ To install, just unpack it to your preferred location. To run, go to its directo
 java -jar cxf-simple-ws-client-1.0.0-SNAPSHOT.jar
 ```
 
+By default, the transactions will be sent to http://localhost:80/TimeService. If you are 
+running the server on a different port, you can use: 
+
+
+```
+ java -jar cxf-simple-ws-client-1.0.0-SNAPSHOT.jar http://orpiske:8080/camel-cxf-web/TimeService
+```
+
 References
 ----
 
